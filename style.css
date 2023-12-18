@@ -1,0 +1,264 @@
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('assets/fonts/medium/TTLakes-Medium.woff2') format('woff2'),
+       url('assets/fonts/medium/TTLakes-Medium.woff') format('woff');
+      
+  
+}
+
+@font-face {
+  font-family: 'TT Lakes Bold';
+  src: url('assets/fonts/bold/TTLakes-ExtraBold.woff2') format('woff2'),
+      url('assets/fonts/bold/TTLakes-ExtraBold.woff') format('woff');
+}
+
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'TT Lakes';
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color:#1B1C21;
+
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+html,
+body {
+  min-width: 320px;
+  height: fit-content;
+  color: #1B1C21;
+  font-family: 'TT Lakes', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  overflow-x: hidden;
+}
+.wrapper{
+  position: absolute;
+  left: 0;
+  width: 320px;
+  background-color: #FFFFFF;
+}
+button{
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+/*----------------------header style-----------------*/
+
+.header__container {
+  
+  height: 100px;
+  max-width: 100%;
+  padding: 0;
+  margin: 20px;
+  font-size: 16px;
+  color:#1B1C21;
+}
+.header-menu,
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+/* .header-menu__link_img:hover,
+.footer__mail:hover,
+.footer__phone:hover {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+} */
+.header-menu .header-menu__item:first-child,
+.header-menu .header-menu__item:last-child,
+.footer-button{
+  width: 40px;
+  height: 40px;
+  max-width: 100%;
+  background-size: contain;
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+.header-menu .header-menu__item:first-child{
+  background-image: url(assets/logo/mobile/ic/burgerclose.png);
+  background-color: #FFFFFF;
+}
+.header-menu--logo {
+  width: 96px;
+  height: auto;
+  max-width: 160px;
+}
+.header-menu .header-menu__item:last-child{
+  margin-left: 4rem;
+  background-image: url(assets/logo/mobile/ic/search.png);
+  background-color: #FFFFFF;
+}
+/*----------------------------*/
+.main{
+  height: 700px;
+}
+.main__container{
+  padding: 0 25px;
+}
+.services-nav__list{
+  display: flex;
+  flex-direction: column;
+}
+.services-nav__list li{
+  position: relative;
+  padding: 0.7rem 0;
+  
+} 
+.services-nav__list  li a{
+  border-left: 4px solid transparent;
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: #1B1C21;
+  transition: opacity 0.3s;
+}
+.services-nav__list  li a:hover{
+opacity: 50%;
+transition: opacity 0.3s;
+}
+.services-nav__list  li a:active,
+.services-nav__list  li a:focus {
+  color:#7E7E82;
+}
+/* .services-nav__list  li a:hover{
+  text-shadow: 0 0 2px 2px #1B1C21;
+
+} */
+/* .services-nav__list  li a:hover::before, */
+.services-nav__list  li a:active::before,
+.services-nav__list  li a:focus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -25px; 
+  width: 5px;
+  height: 100%;
+  background-image:url(assets/logo/highlightpng.png);
+  transition:0.3s;
+}
+.button-round{
+  border-radius: 50%;
+  transition: transform 0.5s;
+}
+.button-round:hover{
+  
+  transform: scale(1.04);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.5s transform 0.5s;
+}
+.button-round:active{
+transform: scale(0.95);
+  filter:brightness(90%);
+}
+
+/*----------------------------*/
+
+.footer__container{
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  padding: 0 25px;
+}
+.footer-nav{
+  flex:2;
+  justify-content: flex-start;
+}
+.footer-nav button:first-child{
+  margin: 0 10px 0 0;
+}
+.footer-nav .footer-button{
+  margin: 0 10px;
+}
+.footer-nav .footer-button:first-child{
+  background-image: url(assets/logo/tablet/ic/call.png);
+}
+.footer-nav .footer-button:nth-child(2){
+  background-image: url(assets/logo/tablet/ic/chat.png);
+}
+.footer-nav .footer-button:last-child{
+  background-image: url(assets/logo/tablet/ic/profile.png);
+}
+.footer-contacts{
+ 
+  flex:2;
+}
+.footer-contacts a{
+  position: relative;
+  margin: 10px 0;
+}
+.footer__phone{
+  font-family: 'TT Lakes Bold';
+  display: block;
+font-size: 24px;
+line-height: 32px;
+text-align: left;
+
+  color: #1B1C21;
+}
+.footer__mail,
+.footer__phone{
+  display: block;
+  width: fit-content;
+  margin: 10px 0;
+  border-bottom: 1px solid transparent;
+}
+.footer-contacts a:before{
+    position: absolute;
+    bottom:-5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #1B1C21;
+    content: "";
+    transform:scaleX(0);
+    transition: transform 0.5s;
+    transform-origin: right;
+    
+}
+
+.footer-contacts a:hover:before{
+  transform: scaleX(1);
+  transition: transform 0.5s;
+  transform-origin: left;
+}
+
+.language-container{
+ flex:3;
+ display: flex;
+  align-items: center;
+}
+.language-list{
+  display: flex;
+  align-items: end;
+
+}
+.language-list li {
+  width: 24px;
+  height: 24px;
+  margin: 2px;
+}
+.language-list li button:hover,
+.language-list li button:active,
+.language-list li button:focus{
+color:#7E7E82;
+cursor: pointer;
+}
