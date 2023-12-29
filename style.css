@@ -251,7 +251,7 @@ text-align: left;
   align-items: end;
 
 }
-.language-list li {
+/* .language-list li {
   width: 24px;
   height: 24px;
   margin: 2px;
@@ -266,4 +266,12 @@ cursor: pointer;
 .language-list li button:hover{
   transform: scale(1.1);
   transition:0.3s; 
+} */
+
+.radio-button,
+.radio-button ~ label{
+  cursor: pointer;
+}
+.radio-button{
+  display: none;
 }
